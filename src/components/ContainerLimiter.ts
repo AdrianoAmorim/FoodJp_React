@@ -6,5 +6,4 @@ export const ContainerLimiter = styled.div`
     align-items: center;
     width: 100%;
     max-width: 950px;
-    background-color: aqua;
 `;

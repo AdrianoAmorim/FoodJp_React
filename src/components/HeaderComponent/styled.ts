@@ -6,7 +6,6 @@ export const Header = styled.header`
     align-items: center;
     width: 100%;
     height: 90px;
-    background-color: brown;
 `;
 
 export const ButtonHeader =styled.a`
@@ -16,4 +15,5 @@ export const ButtonHeader =styled.a`
     text-decoration: none;
     color:#292929;
     cursor: pointer;
+    font-family: Inter;
 `;
