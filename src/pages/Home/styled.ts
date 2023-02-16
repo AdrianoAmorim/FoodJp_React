@@ -5,6 +5,12 @@ export const Container = styled.div`
     justify-content: center;
     width: 100vw;
     background-color: var(--bgPage);
+    & #modoPreparo #linkModoPreparo{
+        font-size: 1.6rem;
+        color: var(--bgButton);
+        font-family: Inter;
+        
+    }
 `;
 
 export const Main = styled.main`
@@ -20,8 +26,15 @@ export const Section = styled.section`
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-bottom: 60px;
+    & #boxImgPreparo{
+        max-width: 34rem;
+         img{
+            border-radius: 18px;
+        }
+    }
 `;
-export const BoxTextCardapio = styled.div`
+export const BoxText = styled.div`
     display: flex;
     justify-content: center;
     align-items: start;
@@ -33,7 +46,7 @@ export const BoxTextCardapio = styled.div`
         font-size: 1.5rem;
         color: var(--title);
         margin: 28px 0 50px 0;
-        line-height: 35px;
+        line-height: 38px;
     }
     h2{
         font-family: Montserrat;
@@ -41,7 +54,7 @@ export const BoxTextCardapio = styled.div`
         font-size: 2.8rem;
     }
 `;
-export const BoxImgCardapio = styled.div`
+export const BoxImg = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
