@@ -4,13 +4,14 @@ type ButtonProps = {
     bg?: string,
     border?: number,
     colorText?: string,
-    width?:number
+    width?:number,
+    height?:number
 }
 
 export const Button = styled.a<ButtonProps>`
-    padding: 7px ${props=> props.width ? `${props.width}px`: "54px" };
+    padding: ${props=> props.height ? `${props.height}px`: "7px" } ${props=> props.width ? `${props.width}px`: "54px" };
     border-radius: 8px;
-    border: ${props => props.border ? `${props.border}px solid var(--title)` : "2px solid var(--title)"};
+    border: ${props => (props.border == 0) ? `${props.border}px solid var(--title)` : "2px solid var(--title)"};
     text-decoration: none;
     color: ${props => props.colorText ? props.colorText : "var(--title)"};
     cursor: pointer;

@@ -32,6 +32,6 @@ export const GlobalStyles = createGlobalStyle`
         --bgCard: #f3f3f3;
         --textFooter: #616161;
         --title:#292929;
-        --bgPage: #f3f3f3;
+        --bgPage: #fbfbfb;
     }
 `;
