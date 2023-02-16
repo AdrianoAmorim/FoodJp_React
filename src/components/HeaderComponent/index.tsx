@@ -1,14 +1,15 @@
 
-import { ButtonHeader, Header } from "./styled"
+import * as C from "./styled"
 import { Logo } from "../LogoComponent"
 import { Menu } from "./menuComponent"
+import { Button } from "../ButtonComponent"
 
 export const HeaderComponent = () => {
   return (
-    <Header>
+    <C.Header>
       <Logo></Logo>
       <Menu />
-      <ButtonHeader>Entrar</ButtonHeader>
-    </Header>
+      <Button href="">Entrar</Button>
+    </C.Header>
   )
 }
