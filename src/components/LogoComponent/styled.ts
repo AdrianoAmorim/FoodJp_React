@@ -9,8 +9,8 @@ export const BoxLogo = styled.div`
 `;
 
 export const SpanLogo = styled.span<SpanProps>`
-    font-family: Montserrat;
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-family: "Montserrat Bold";
+    font-size: 2.5rem;
+    font-weight: bold;
     color: var(${props=> props.color});
 `;

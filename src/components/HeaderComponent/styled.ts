@@ -9,11 +9,12 @@ export const Header = styled.header`
 `;
 
 export const ButtonHeader =styled.a`
-    padding: 5px 35px;
+    padding: 5px 56px;
     border-radius: 8px;
-    border: 1px solid #000;
+    border: 2px solid var(--title);
     text-decoration: none;
-    color:#292929;
+    color: var(--title);
     cursor: pointer;
     font-family: Inter;
+    font-size: 1.6rem;
 `;
