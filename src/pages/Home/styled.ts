@@ -2,6 +2,14 @@ import styled from "styled-components";
 type SectionProps = {
     direction?: string
 }
+type BoxCardProps ={
+    flex?:number,
+    width?:string,
+    align?:string
+}
+type BoxFlexRowProps= {
+    justify?:string
+}
 
 export const Container = styled.div`
     display: flex;
@@ -14,20 +22,38 @@ export const Container = styled.div`
         font-family: Inter;
     }
 
-    & #pratosPopulares{
+    & #pratosPopulares,#comentarios{
         h2{
             font-size: 3.0rem;
             color: var(--title);
             font-family: Montserrat;
             margin-bottom: 140px;
         }
-        #boxFlexRow{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+       
+    }
+    & #comentarios{
+        h2{
+            margin-bottom:40px;
+            text-align: start;
             width: 100%;
         }
+        p{
+            font-size: 1.6rem;
+            text-align: start;
+            line-height: 38px;
+        }
     }
+    
+`;
+export const boxFlexRow = styled.div <BoxFlexRowProps>`
+            display: flex;
+            flex-direction: row;
+            justify-content: ${props => props.justify ? props.justify : "space-between"} ;
+            width: 100%;
+
+            & #starComentarios{
+                margin-right: 6px;
+            }
 `;
 
 export const Main = styled.main`
@@ -89,20 +115,24 @@ export const BoxImg = styled.div`
     }
 `;
 
-export const boxCardPratos = styled.div`
+export const boxCard = styled.div<BoxCardProps>`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: ${props => props.align ? props.align: "center"};
     justify-content: space-between;
     background-color: var(--bgCard);
     padding: 30px;
     border-radius: 30px;
-    max-width: 380px;
-   
+    max-width: ${props => props.width ? props.width: "380px"};
+    flex: ${props => props.flex ? props.flex: 1};
+    
     & img{
         width:100%;
         max-width: 280px;
         margin-top: -130px;
+    }
+    & .boxAvatarComentarios img{
+        margin-top: 0;
     }
     & h3{
         margin-top: 40px;
@@ -124,6 +154,11 @@ export const boxCardPratos = styled.div`
         font-family: Montserrat;
         color: var(--title);
         font-weight: bold;
+    }
+    & #starComentarios{
+        width: 100%;
+        max-width:20px;
+         margin-top: 0;
     }
 
 `;

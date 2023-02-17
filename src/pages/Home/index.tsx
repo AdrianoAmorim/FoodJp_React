@@ -5,7 +5,10 @@ import Sushi from "../../assets/img/sushi-japanese.png";
 import SeguraPrato from "../../assets/img/imgSegurandoPrato.png";
 import Prato1 from "../../assets/img/img-1.png";
 import Prato2 from "../../assets/img/img-2.png";
-import Prato3 from "../../assets/img/img-3.png";
+import Prato3 from "../../assets/img/img-2.png";
+import profile1 from "../../assets/img/profile1.png";
+import profile2 from "../../assets/img/profile2.png";
+import star from "../../assets/img/star.svg";
 import { Button } from "../../components/ButtonComponent";
 
 
@@ -51,32 +54,66 @@ export const Home = () => {
 
                     <C.Section id="pratosPopulares" direction="column">
                         <h2>Mais Populares</h2>
-                        <div id="boxFlexRow">
-                            <C.boxCardPratos>
+                        <C.boxFlexRow>
+                            <C.boxCard>
                                 <img src={Prato3} />
                                 <h3>Ramem de Frango</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing
                                 </p>
                                 <span>R$ 30</span>
-                            </C.boxCardPratos>
-                            <C.boxCardPratos>
+                            </C.boxCard>
+                            <C.boxCard>
                                 <img src={Prato1} />
                                 <h3>Ramem de Frango</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing
                                 </p>
                                 <span>R$ 30</span>
-                            </C.boxCardPratos>
-                            <C.boxCardPratos>
+                            </C.boxCard>
+                            <C.boxCard>
                                 <img src={Prato2} />
                                 <h3>Ramem de Frango</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing
                                 </p>
                                 <span>R$ 30</span>
-                            </C.boxCardPratos>
-                        </div>
+                            </C.boxCard>
+                        </C.boxFlexRow>
+                    </C.Section>
+
+                    <C.Section id="comentarios" direction="column">
+                        <h2>Comentários</h2>
+                        <C.boxFlexRow>
+                            <C.boxCard width="49%" align="start" >
+                                <div className="boxAvatarComentarios">
+                                    <img src={profile1} />
+                                </div>
+                                <h3>Daniele Almeida</h3>
+                                <p>Ótimo serviço! Encatada com a qualidade dos pratos. </p>
+                                <C.boxFlexRow justify="start">
+                                    <img id="starComentarios" src={star} />
+                                    <img id="starComentarios" src={star} />
+                                    <img id="starComentarios" src={star} />
+                                    <img id="starComentarios" src={star} />
+                                    <img id="starComentarios" src={star} />
+                                </C.boxFlexRow>
+                            </C.boxCard>
+                            <C.boxCard width="49%" align="start">
+                                <div className="boxAvatarComentarios">
+                                    <img src={profile2} />
+                                </div>
+                                <h3>Ricardo França</h3>
+                                <p>Não é apenas a comida excelente, o serviço torna a experiência especial. </p>
+                                <C.boxFlexRow justify="start">
+                                    <img id="starComentarios" src={star} />
+                                    <img id="starComentarios" src={star} />
+                                    <img id="starComentarios" src={star} />
+                                    <img id="starComentarios" src={star} />
+                                    <img id="starComentarios" src={star} />
+                                </C.boxFlexRow>
+                            </C.boxCard>
+                        </C.boxFlexRow>
                     </C.Section>
 
                 </C.Main>
