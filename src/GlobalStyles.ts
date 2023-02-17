@@ -3,6 +3,7 @@ import Inter from "./assets/font/Inter-Medium.ttf"
 import InterRegular from "./assets/font/Inter-Regular.ttf"
 import Montserrat from "./assets/font/Montserrat-Medium.ttf"
 import MontserratBold from "./assets/font/Montserrat-Bold.ttf"
+import MontserratSemi from "./assets/font/Montserrat-SemiBold.ttf"
 
 export const GlobalStyles = createGlobalStyle`
 *{
@@ -25,6 +26,10 @@ export const GlobalStyles = createGlobalStyle`
     @font-face {
         font-family: "Montserrat Bold" ;
         src: url(${MontserratBold});
+    }
+    @font-face {
+        font-family: "Montserrat Bold" ;
+        src: url(${MontserratSemi});
     }
 
     :root{

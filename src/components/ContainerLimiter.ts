@@ -5,5 +5,5 @@ export const ContainerLimiter = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 1150px;
+    max-width: 1200px;
 `;
