@@ -48,6 +48,7 @@ export const Container = styled.div`
 export const boxFlexRow = styled.div <BoxFlexRowProps>`
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: ${props => props.justify ? props.justify : "space-between"} ;
             width: 100%;
 
@@ -124,12 +125,13 @@ export const boxCard = styled.div<BoxCardProps>`
     padding: 30px;
     border-radius: 30px;
     max-width: ${props => props.width ? props.width: "380px"};
-    flex: ${props => props.flex ? props.flex: 1};
+    min-width: 380px;
+    flex: ${props => props.flex ? props.flex : 1};
     
     & img{
         width:100%;
         max-width: 280px;
-        margin-top: -130px;
+        margin-top: -9rem;
     }
     & .boxAvatarComentarios img{
         margin-top: 0;
