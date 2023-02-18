@@ -8,7 +8,8 @@ type BoxCardProps = {
     align?: string
 }
 type BoxFlexRowProps = {
-    justify?: string
+    justify?: string,
+    wrap?:string
 }
 type BoxImgProps = {
     width?: string
@@ -71,7 +72,7 @@ export const Container = styled.div`
 export const BoxFlexRow = styled.div <BoxFlexRowProps>`
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            flex-wrap: ${props => props.wrap ? props.wrap : "nowrap"};
             justify-content: ${props => props.justify ? props.justify : "space-between"} ;
             width: 100%;
 `;
@@ -191,7 +192,7 @@ export const InputSearchMap = styled.input`
     border: 1px solid var(--title);
     border-radius: 10px 0 0 10px;
     font-family: Montserrat;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--title);
     outline: none;
     padding-inline-start: 60px;

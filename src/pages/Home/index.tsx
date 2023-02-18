@@ -56,7 +56,7 @@ export const Home = () => {
 
                     <C.Section id="pratosPopulares" direction="column">
                         <h2>Mais Populares</h2>
-                        <C.BoxFlexRow>
+                        <C.BoxFlexRow wrap="wrap">
                             <C.BoxCard>
                                 <img src={Prato3} />
                                 <h3>Ramem de Frango</h3>
