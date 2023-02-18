@@ -2,13 +2,16 @@ import styled from "styled-components";
 type SectionProps = {
     direction?: string
 }
-type BoxCardProps ={
-    flex?:number,
-    width?:string,
-    align?:string
+type BoxCardProps = {
+    flex?: number,
+    width?: string,
+    align?: string
 }
-type BoxFlexRowProps= {
-    justify?:string
+type BoxFlexRowProps = {
+    justify?: string
+}
+type BoxImgProps = {
+    width?: string
 }
 
 export const Container = styled.div`
@@ -22,7 +25,7 @@ export const Container = styled.div`
         font-family: Inter;
     }
 
-    & #pratosPopulares,#comentarios{
+    & #pratosPopulares,#comentarios,#localizacao{
         h2{
             font-size: 3.0rem;
             color: var(--title);
@@ -31,7 +34,7 @@ export const Container = styled.div`
         }
        
     }
-    & #comentarios{
+    & #comentarios,#localizacao{
         h2{
             margin-bottom:40px;
             text-align: start;
@@ -43,18 +46,34 @@ export const Container = styled.div`
             line-height: 38px;
         }
     }
+    & #comentarios{
+        
+        & #starComentarios{
+                margin-right: 6px;
+            }
+    }
+    & #localizacao{
+        img{
+            border-radius: 20px;
+           
+        }
+        #boxInputSearchMap{
+            margin-top: 40px;
+            img{
+            width: 2.2rem;
+            margin-right: -50px;
+            z-index: 1;
+            }
+        }
+    }
     
 `;
-export const boxFlexRow = styled.div <BoxFlexRowProps>`
+export const BoxFlexRow = styled.div <BoxFlexRowProps>`
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: ${props => props.justify ? props.justify : "space-between"} ;
             width: 100%;
-
-            & #starComentarios{
-                margin-right: 6px;
-            }
 `;
 
 export const Main = styled.main`
@@ -105,26 +124,26 @@ export const BoxText = styled.div`
     }
 `;
 
-export const BoxImg = styled.div`
+export const BoxImg = styled.div<BoxImgProps>`
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
-    max-width: 25rem;
+    max-width: ${props => props.width ? props.width : "25rem"};
     img{
         width: 100%;
     }
 `;
 
-export const boxCard = styled.div<BoxCardProps>`
+export const BoxCard = styled.div<BoxCardProps>`
     display: flex;
     flex-direction: column;
-    align-items: ${props => props.align ? props.align: "center"};
+    align-items: ${props => props.align ? props.align : "center"};
     justify-content: space-between;
     background-color: var(--bgCard);
     padding: 30px;
     border-radius: 30px;
-    max-width: ${props => props.width ? props.width: "380px"};
+    max-width: ${props => props.width ? props.width : "380px"};
     min-width: 380px;
     flex: ${props => props.flex ? props.flex : 1};
     
@@ -163,4 +182,30 @@ export const boxCard = styled.div<BoxCardProps>`
          margin-top: 0;
     }
 
+`;
+
+export const InputSearchMap = styled.input`
+    width: 100%;
+    max-width: 40rem;
+    height: 4.3rem;
+    border: 1px solid var(--title);
+    border-radius: 10px 0 0 10px;
+    font-family: Montserrat;
+    font-size: 1.8rem;
+    color: var(--title);
+    outline: none;
+    padding-inline-start: 60px;
+
+`;
+export const BtnSearchMap = styled.button`
+        width: 100%;
+        max-width: 180px;
+        background-color: var(--bgButton);
+        color: var(--bgPage);
+        border: none;
+        font-size: 1.5rem;
+        font-family: Montserrat;
+        border-radius: 0 10px 10px 0;
+        margin-left: -10px;
+        cursor: pointer;
 `;

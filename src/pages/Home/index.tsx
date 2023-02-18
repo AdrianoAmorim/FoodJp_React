@@ -9,6 +9,8 @@ import Prato3 from "../../assets/img/img-2.png";
 import profile1 from "../../assets/img/profile1.png";
 import profile2 from "../../assets/img/profile2.png";
 import star from "../../assets/img/star.svg";
+import map from "../../assets/img/map.png"
+import pin from "../../assets/img/pin.svg"
 import { Button } from "../../components/ButtonComponent";
 
 
@@ -54,66 +56,81 @@ export const Home = () => {
 
                     <C.Section id="pratosPopulares" direction="column">
                         <h2>Mais Populares</h2>
-                        <C.boxFlexRow>
-                            <C.boxCard>
+                        <C.BoxFlexRow>
+                            <C.BoxCard>
                                 <img src={Prato3} />
                                 <h3>Ramem de Frango</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing
                                 </p>
                                 <span>R$ 30</span>
-                            </C.boxCard>
-                            <C.boxCard>
+                            </C.BoxCard>
+                            <C.BoxCard>
                                 <img src={Prato1} />
                                 <h3>Ramem de Frango</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing
                                 </p>
                                 <span>R$ 30</span>
-                            </C.boxCard>
-                            <C.boxCard>
+                            </C.BoxCard>
+                            <C.BoxCard>
                                 <img src={Prato2} />
                                 <h3>Ramem de Frango</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing
                                 </p>
                                 <span>R$ 30</span>
-                            </C.boxCard>
-                        </C.boxFlexRow>
+                            </C.BoxCard>
+                        </C.BoxFlexRow>
                     </C.Section>
 
                     <C.Section id="comentarios" direction="column">
                         <h2>Comentários</h2>
-                        <C.boxFlexRow>
-                            <C.boxCard width="49%" align="start" >
+                        <C.BoxFlexRow>
+                            <C.BoxCard width="49%" align="start" >
                                 <div className="boxAvatarComentarios">
                                     <img src={profile1} />
                                 </div>
                                 <h3>Daniele Almeida</h3>
                                 <p>Ótimo serviço! Encatada com a qualidade dos pratos. </p>
-                                <C.boxFlexRow justify="start">
+                                <C.BoxFlexRow justify="start">
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
-                                </C.boxFlexRow>
-                            </C.boxCard>
-                            <C.boxCard width="49%" align="start">
+                                </C.BoxFlexRow>
+                            </C.BoxCard>
+                            <C.BoxCard width="49%" align="start">
                                 <div className="boxAvatarComentarios">
                                     <img src={profile2} />
                                 </div>
                                 <h3>Ricardo França</h3>
                                 <p>Não é apenas a comida excelente, o serviço torna a experiência especial. </p>
-                                <C.boxFlexRow justify="start">
+                                <C.BoxFlexRow justify="start">
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
-                                </C.boxFlexRow>
-                            </C.boxCard>
-                        </C.boxFlexRow>
+                                </C.BoxFlexRow>
+                            </C.BoxCard>
+                        </C.BoxFlexRow>
+                    </C.Section>
+
+                    <C.Section id="localizacao" direction="column">
+                        <h2>Localização</h2>
+                        <C.BoxImg width="100%">
+                            <img src={map}/>
+                        </C.BoxImg>
+                        <C.BoxFlexRow justify="center" id="boxInputSearchMap">
+                            <img src={pin}/>
+                            <C.InputSearchMap>
+                            </C.InputSearchMap>
+                            <C.BtnSearchMap>Buscar</C.BtnSearchMap>
+                        </C.BoxFlexRow>
+                        
+
                     </C.Section>
 
                 </C.Main>
