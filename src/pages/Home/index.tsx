@@ -12,6 +12,7 @@ import star from "../../assets/img/star.svg";
 import map from "../../assets/img/map.png"
 import pin from "../../assets/img/pin.svg"
 import { Button } from "../../components/ButtonComponent";
+import { Footer } from "../../components/FooterComponent";
 
 
 export const Home = () => {
@@ -134,6 +135,7 @@ export const Home = () => {
                     </C.Section>
 
                 </C.Main>
+                <Footer/>
             </ContainerLimiter>
         </C.Container >
     )

@@ -1,14 +1,17 @@
 import styled from "styled-components";
-type SpanProps ={
-    color:string
+type LogoProps ={
+    color?:string,
+    flex?:number
+
 }
-export const BoxLogo = styled.div`
+export const BoxLogo = styled.div<LogoProps>`
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    flex:${props => props.flex ? props.flex : 1}
 `;
 
-export const SpanLogo = styled.span<SpanProps>`
+export const SpanLogo = styled.span<LogoProps>`
     font-family: "Montserrat Bold";
     font-size: 2.5rem;
     font-weight: bold;

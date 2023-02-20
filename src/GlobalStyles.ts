@@ -28,7 +28,7 @@ export const GlobalStyles = createGlobalStyle`
         src: url(${MontserratBold});
     }
     @font-face {
-        font-family: "Montserrat Bold" ;
+        font-family: "Montserrat Semi" ;
         src: url(${MontserratSemi});
     }
 
