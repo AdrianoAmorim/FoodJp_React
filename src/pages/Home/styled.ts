@@ -9,7 +9,7 @@ type BoxCardProps = {
 }
 type BoxFlexRowProps = {
     justify?: string,
-    wrap?:string
+    wrap?: string
 }
 type BoxImgProps = {
     width?: string
@@ -67,7 +67,106 @@ export const Container = styled.div`
             }
         }
     }
-    
+
+    @media(max-width:1120px){
+        #pratosPopulares #boxCardPratosPolulares{
+            justify-content: space-evenly;
+        }
+        #pratosPopulares {
+            & h2{
+                margin-bottom: 0;
+            }
+            & #boxCardPratosPolulares div{
+                margin-top: 140px;
+            }
+        }
+    }
+    @media (max-width: 810px){
+      #modoPreparo,#pratosPopulares,#comentarios,#localizacao{
+            & h2{
+            font-size: 2rem;
+        }
+       } 
+
+       #cardapio{
+        justify-content: center;
+        & h2{
+            font-size: 2.6rem;
+        }
+        & p{
+            font-size: 1.3rem;
+        }
+        & #imgCardapio{
+            display:none;
+        }
+        & a{
+            width: 100%;
+            text-align: center;
+        }
+       }
+
+       #modoPreparo{
+        flex-direction: column;
+        & div:nth-child(2){
+            text-align: center;
+            align-items: center;
+        }
+        & #boxImgPreparo{
+            margin-bottom: 3.4rem;
+        }
+       }
+
+       #pratosPopulares{
+        & h2{
+            margin-bottom: -3rem;
+        }
+        div{
+            margin-top: 140px;
+        }
+        & h3{
+            font-size: 1.5rem;
+        }
+        & span{
+            font-weight: normal;
+        }
+       }
+       #comentarios {
+        & h2{
+            text-align: center;
+        }
+        & #boxCardComentarios{
+            flex-direction: column;
+            align-items: center;
+            & div{
+                align-items: center;
+                margin-bottom: 25px;
+                & p{
+                    text-align: center;
+                    line-height: 24px;
+                }
+            }
+            & h3{
+                font-size: 1.4rem;
+                margin-top: 0;
+            }
+            & p{
+                font-size: 1rem;
+            }
+            & .boxStarComentarios{
+                justify-content: center;
+            }
+        }
+       }
+
+    }
+    @media (max-width:395px){
+        #cardapio{
+            & h2{
+                font-size: 2.2rem;
+            }
+        }
+    }
+
 `;
 export const BoxFlexRow = styled.div <BoxFlexRowProps>`
             display: flex;
@@ -95,6 +194,7 @@ export const Section = styled.section<SectionProps>`
     & #boxImgPreparo{
         height: 90%;
         max-width: 36rem;
+        margin-right: 1.1rem;
          img{
             height: 100%;
             border-radius: 18px;
@@ -181,8 +281,16 @@ export const BoxCard = styled.div<BoxCardProps>`
         width: 100%;
         max-width:20px;
          margin-top: 0;
+    }   
+  @media (max-width:440px){
+    min-width: 230px;
+    max-width: 100%;
+    padding: 20px;
+   
+    & img{
+        max-width: 230px;
     }
-
+  }
 `;
 
 export const InputSearchMap = styled.input`

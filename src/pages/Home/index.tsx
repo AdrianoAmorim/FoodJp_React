@@ -36,7 +36,7 @@ export const Home = () => {
                                 border={0}>
                                 Cardápio</Button>
                         </C.BoxText>
-                        <C.BoxImg>
+                        <C.BoxImg id="imgCardapio">
                             <img src={Sushi} />
                         </C.BoxImg>
                     </C.Section>
@@ -57,7 +57,7 @@ export const Home = () => {
 
                     <C.Section id="pratosPopulares" direction="column">
                         <h2>Mais Populares</h2>
-                        <C.BoxFlexRow wrap="wrap">
+                        <C.BoxFlexRow wrap="wrap" id="boxCardPratosPolulares">
                             <C.BoxCard>
                                 <img src={Prato3} />
                                 <h3>Ramem de Frango</h3>
@@ -87,14 +87,14 @@ export const Home = () => {
 
                     <C.Section id="comentarios" direction="column">
                         <h2>Comentários</h2>
-                        <C.BoxFlexRow>
+                        <C.BoxFlexRow id="boxCardComentarios">
                             <C.BoxCard width="49%" align="start" >
                                 <div className="boxAvatarComentarios">
                                     <img src={profile1} />
                                 </div>
                                 <h3>Daniele Almeida</h3>
                                 <p>Ótimo serviço! Encatada com a qualidade dos pratos. </p>
-                                <C.BoxFlexRow justify="start">
+                                <C.BoxFlexRow justify="start" className="boxStarComentarios">
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
@@ -108,7 +108,7 @@ export const Home = () => {
                                 </div>
                                 <h3>Ricardo França</h3>
                                 <p>Não é apenas a comida excelente, o serviço torna a experiência especial. </p>
-                                <C.BoxFlexRow justify="start">
+                                <C.BoxFlexRow justify="start" className="boxStarComentarios">
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
                                     <img id="starComentarios" src={star} />
