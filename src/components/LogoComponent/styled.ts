@@ -16,4 +16,8 @@ export const SpanLogo = styled.span<LogoProps>`
     font-size: 2.5rem;
     font-weight: bold;
     color: var(${props=> props.color});
+
+    @media (max-width: 599px){
+        font-size: 2.2rem;
+    }
 `;

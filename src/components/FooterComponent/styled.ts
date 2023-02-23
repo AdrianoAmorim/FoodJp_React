@@ -29,6 +29,40 @@ export const FooterContainer = styled.footer`
         color:  var(--textFooter);
     }
    }
- 
+ @media (max-width:810px){
+    & .boxAreaFooter{
+        h2{
+            font-size: 1.7rem;
+        }
+        a{
+            font-size: .9rem;
+        }
+    }
+ }
+ @media (max-width:720px){
+    flex-direction: column;
+    & .boxAreaFooter{
+       margin-top: 30px;
+       h2{
+            font-size: 1.9rem;
+        }
+        a{
+            font-size: 1.1rem;
+        }
+    }
+ }
+ @media (max-width:599px){
+    align-items: center;
+    & .boxAreaFooter{
+        align-items: center;
+        margin-top: 30px;
+       h2{
+        font-size: 1.7rem;
+        }
+        a{
+        font-size: .9rem;
+        }
+    }
+ }
  
 `

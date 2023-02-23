@@ -80,6 +80,12 @@ export const Container = styled.div`
                 margin-top: 140px;
             }
         }
+        #localizacao{
+            & #boxInputSearchMap{
+                align-items: center;
+                padding: 0 1.6rem;
+            }
+        }
     }
     @media (max-width: 810px){
       #modoPreparo,#pratosPopulares,#comentarios,#localizacao{
@@ -157,7 +163,52 @@ export const Container = styled.div`
             }
         }
        }
+       #localizacao{
+        h2{
+            text-align: center;
+            margin-bottom: 28px;
+        }
+         & #boxInputSearchMap{
+            margin-top: 30px;
+                & img{
+                    width: 2.1rem;
+                    margin-right: -42px;
+                }
+                & input{
+                    max-width: 26rem;
+                    height: 3.6rem;
+                    font-size: 1.4rem;
+                       padding-inline-start: 50px;
+                }
+                & button{
+                    font-size: 1.3rem;
+                    max-width: 150px;
+                }
+            }
+        }
 
+    }
+
+    @media (max-width: 599px){
+        #localizacao{
+            & #boxInputSearchMap{
+                    & img{
+                        width: 1.6rem;
+                        margin-right: -38px;
+                    }
+                   & input{
+                       max-width: 20rem;
+                       height: 2.8rem;
+                       font-size: 1.1rem;
+                       padding-inline-start: 50px;
+                   }
+                   & button{
+                       font-size: 1.1rem;
+                       max-width: 100px;
+                       margin-left: -8px;
+                   }
+               }
+           }
     }
     @media (max-width:395px){
         #cardapio{
@@ -165,10 +216,22 @@ export const Container = styled.div`
                 font-size: 2.2rem;
             }
         }
+        #localizacao{
+            & #boxInputSearchMap{
+                font-size: 1rem;
+                & button{
+                    font-size: 1rem;
+                    max-width: 80px;
+                    margin-left: 0px;
+                }
+            }
+        }
     }
 
 `;
+
 export const BoxFlexRow = styled.div <BoxFlexRowProps>`
+
             display: flex;
             flex-direction: row;
             flex-wrap: ${props => props.wrap ? props.wrap : "nowrap"};
@@ -294,6 +357,7 @@ export const BoxCard = styled.div<BoxCardProps>`
 `;
 
 export const InputSearchMap = styled.input`
+
     width: 100%;
     max-width: 40rem;
     height: 4.3rem;
@@ -309,6 +373,7 @@ export const InputSearchMap = styled.input`
 export const BtnSearchMap = styled.button`
         width: 100%;
         max-width: 180px;
+        height: 100%;
         background-color: var(--bgButton);
         color: var(--bgPage);
         border: none;

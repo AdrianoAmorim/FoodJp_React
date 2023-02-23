@@ -126,8 +126,7 @@ export const Home = () => {
                         </C.BoxImg>
                         <C.BoxFlexRow justify="center" id="boxInputSearchMap">
                             <img src={pin}/>
-                            <C.InputSearchMap>
-                            </C.InputSearchMap>
+                            <C.InputSearchMap/>
                             <C.BtnSearchMap>Buscar</C.BtnSearchMap>
                         </C.BoxFlexRow>
                         
