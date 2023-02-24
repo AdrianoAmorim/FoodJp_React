@@ -11,6 +11,9 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
     @font-face {
         font-family: Inter ;
         src: url(${Inter});
@@ -38,5 +41,23 @@ export const GlobalStyles = createGlobalStyle`
         --textFooter: #616161;
         --title:#292929;
         --bgPage: #fbfbfb;
+    }
+
+    .show{
+        display:flex;
+    }
+    .animationMenuMob{
+        animation: fadeInMenu .3s ease-in-out forwards;
+    }
+
+    @keyframes fadeInMenu {
+      from{
+        opacity: 0;
+        transform: translate(0,-30px);
+      } 
+      to{
+        opacity: 1;
+        transform: translate(0,0px);
+      } 
     }
 `;
