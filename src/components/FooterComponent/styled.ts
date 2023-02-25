@@ -24,9 +24,14 @@ export const FooterContainer = styled.footer`
         font-size: 1.1rem;
         font-family: "Inter Regular";
         margin-top: 1.3rem;
+        transition: all .2s ease-in-out;
+        
     }
     a:visited{
         color:  var(--textFooter);
+    }
+    a:hover{
+            color: #bf1826;
     }
    }
  @media (max-width:810px){

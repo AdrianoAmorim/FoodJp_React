@@ -24,6 +24,10 @@ export const Container = styled.div`
         font-size: 1.6rem;
         color: var(--bgButton);
         font-family: Inter;
+        transition: color .2s ease-in-out;
+        &:hover{
+            color:#bf1826;
+        }
     }
 
     & #pratosPopulares,#comentarios,#localizacao{
@@ -382,4 +386,10 @@ export const BtnSearchMap = styled.button`
         border-radius: 0 10px 10px 0;
         margin-left: -10px;
         cursor: pointer;
+        transition: all .2s ease-in-out;
+        
+        &:hover{
+        background-color:#bf1826;
+        color: #fff;
+    }
 `;

@@ -18,4 +18,11 @@ export const Button = styled.a<ButtonProps>`
     font-family: Inter;
     font-size: 1.5rem;
     background-color: ${props => props.bg ? props.bg : "transparent"} ;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        background-color:#bf1826;
+        color: #fff;
+    }
+
 `;
