@@ -9,16 +9,13 @@ export const HeaderComponent = () => {
   const [show, setShow] = useState("");
 
   const showMenuMob = () => {
-    if (show === "show") {
-      setShow("");
-    } else {
-      setShow("show");
-    }
+      if (show === "show") {
+        setShow("");
+      } else {
+        setShow("show");
+      }
   }
-
-
-
-
+ 
   return (
     <C.Header>
       <Logo></Logo>

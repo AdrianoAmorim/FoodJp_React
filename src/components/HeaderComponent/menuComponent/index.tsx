@@ -6,7 +6,7 @@ type MenuProps = {
 
 
 export const Menu = ({ showMenu }: MenuProps) => {
-console.log(showMenu)
+
     return (
         <Nav>
             {

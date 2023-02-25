@@ -27,7 +27,6 @@ export const Ul = styled.ul`
         }
     }
    
-   
 `;
 export const Li = styled.li`
     list-style: none;
@@ -38,8 +37,13 @@ export const Li = styled.li`
     a{
         text-decoration: none;
         color: var(--title);
+        transition: color .2s ease-in;
         &:visited{
             color:var(--title);
+        }
+        
+        &:hover,&:active{
+                color: #616150;
         }
     }
 `;
